@@ -1,0 +1,19 @@
+<ion-view view-title="Mixology">
+    <ion-content>
+        <ion-refresher
+            pulling-text="Pull to refresh..."
+            on-refresh="refreshNews()">
+        </ion-refresher>
+        <h4 class="missingContentMessage" ng-if="missingContentMessage">
+            {{missingContentMessage}}
+        </h4>
+        <div class="list card" ng-repeat="newsItem in news" ng-click="goHref('#/tab/news/{{newsItem.name}}')">
+            <div class="item item-image newsImage">
+                <img ng-src="{{newsItem.imgSrc}}">
+                <div class="titleOverlay item-text-wrap">
+                    {{newsItem.title}}
+                </div>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

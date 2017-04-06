@@ -1,0 +1,51 @@
+img {
+	max-width: 100%;
+}
+
+ion-content ul, ion-content ol {
+	list-style-type: disk;
+	padding-left: 27px;
+}
+
+ion-content ol {
+	list-style-type: decimal;
+}
+
+table.ingredients {
+	width: 100%;
+}
+
+table.ingredients td {
+	border: 1px solid gray;
+	padding: 3px;
+}
+
+.missingContentMessage {
+	text-align: center;
+	padding-top: 40%;
+	color: gray;
+}
+
+.newsImage {
+	position: relative;
+}
+
+.titleOverlay {
+	font-size: 110%;
+	padding: 1em;
+	text-align: left;
+	position: absolute;
+	bottom: 0;
+	opacity: .7;
+	background-color: #fff;
+	width: 100%;
+}
+
+body.platform-ios.showBackButton div.title.header-item {
+	left: 95px;
+	right: 95px;
+}
+
+.showBackButton .bar button.back-button.hide {
+	display: block;
+}

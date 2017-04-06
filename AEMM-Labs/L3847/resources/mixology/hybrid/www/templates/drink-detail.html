@@ -1,0 +1,36 @@
+<ion-view>
+    <ion-nav-title>
+        {{drink.title}}
+    </ion-nav-title>
+    <ion-content class="padding">
+        <img ng-src="{{drink.image.href}}" >
+        <h3>
+            {{drink.title}}
+        </h3>
+
+        <div ng-if="drink.ingredients">
+            <h4>
+                Ingredients
+            </h4>
+            <table class="ingredients">
+                <tbody>
+                    <tr ng-repeat="ingredient in drink.ingredients">
+                        <td>{{ingredient.title}}</td>
+                        <td>{{ingredient.amount}}</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div ng-if="drink.instructions">
+            <h4>
+                Instructions
+            </h4>
+            <ol>
+                <li ng-repeat="instruction in drink.instructions">
+                    {{instruction}}
+                </li>
+            </ol>
+        </div>
+    </ion-content>
+</ion-view>

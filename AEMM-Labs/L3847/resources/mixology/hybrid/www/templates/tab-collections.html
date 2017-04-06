@@ -1,0 +1,18 @@
+<ion-view view-title="Collections">
+    <ion-content>
+        <ion-refresher
+            pulling-text="Pull to refresh..."
+            on-refresh="refreshCollectionsList()">
+        </ion-refresher>
+        <h4 class="missingContentMessage" ng-if="missingContentMessage">
+            {{missingContentMessage}}
+        </h4>
+        
+        <!-- ******************************************************
+          *  Module 2, exercise 4: include the code from the 
+          *  workbook immediately after this comment
+          ****************************************************** -->
+        
+        
+    </ion-content>
+</ion-view>

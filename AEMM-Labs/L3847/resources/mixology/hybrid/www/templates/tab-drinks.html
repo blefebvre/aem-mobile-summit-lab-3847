@@ -1,0 +1,22 @@
+<ion-view view-title="Drinks">
+    <ion-content>
+        <ion-refresher
+            pulling-text="Pull to refresh..."
+            on-refresh="refreshDrinkList()">
+        </ion-refresher>
+        <h4 class="missingContentMessage" ng-if="missingContentMessage">
+            {{missingContentMessage}}
+        </h4>
+        <ion-list>
+            <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="drink in drinks" type="item-text-wrap" href="#/tab/drinks/{{drink.name}}">
+                <img ng-src="{{drink.image.href}}">
+                <h2>
+                    {{drink.title}}
+                </h2>
+                <p>
+                    <i class="ion-ios-star-outline" ng-repeat="i in getRating(drink.rating) track by $index"></i>
+                </p>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

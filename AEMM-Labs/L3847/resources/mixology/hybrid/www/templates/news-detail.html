@@ -1,0 +1,9 @@
+<ion-view>
+    <ion-nav-title>
+        {{article.title}}
+    </ion-nav-title>
+    <ion-content class="padding">
+        <div ng-repeat="contentItem in articleBodyItems" ng-bind-html="contentItem">
+        </div>
+    </ion-content>
+</ion-view>
