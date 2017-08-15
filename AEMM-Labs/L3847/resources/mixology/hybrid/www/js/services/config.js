@@ -9,7 +9,7 @@ angular.module('mixology.services.config', [])
      * IP/hostname of the server.
      ***********************************************************/
     // API URL
-    apiURL: null,
+    apiURL: 'http://localhost:4502',
     
     // Path to fetch an array of drink recipes
     drinkRecipesJSON: '/content/entities/drinks/recipes.caas.1.json',

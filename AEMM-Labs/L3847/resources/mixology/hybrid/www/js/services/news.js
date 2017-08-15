@@ -79,7 +79,9 @@ angular.module('mixology.services.news', ['mixology.services.config'])
             var sync = ContentSync.sync({
                 src: src,
                 id: id,
-                type: 'merge'
+                type: 'merge',
+                // Set the Authorization header for ContentSync downloads 
+                headers: { Authorization: 'Basic YWRtaW46YWRtaW4=' }
             });
 
             sync.on('complete', function(data) {

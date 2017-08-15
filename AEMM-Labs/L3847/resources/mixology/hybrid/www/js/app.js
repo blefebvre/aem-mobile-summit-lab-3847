@@ -13,7 +13,7 @@ angular.module('mixology', [
         'mixology.services.collections'
     ])
 
-.run(function($ionicPlatform) {
+.run(function($ionicPlatform, $http) {
     $ionicPlatform.ready(function() {
         // Hide the accessory bar by default (remove this to show the accessory bar above the keyboard
         // for form inputs)
@@ -26,6 +26,9 @@ angular.module('mixology', [
             StatusBar.styleDefault();
         }
     });
+
+    // Set the global Authorization header for $http calls
+    $http.defaults.headers.common.Authorization = 'Basic YWRtaW46YWRtaW4=';
 })
 
 .config(function($stateProvider, $urlRouterProvider) {
